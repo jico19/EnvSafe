@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-zinc-950: #09090b;
+  --color-zinc-900: #18181b;
+  --color-zinc-800: #27272a;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-600: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-100: #f4f4f5;
+
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-zinc-400 font-sans antialiased;
+  }
+}
+
+@utility bg-grid-zinc {
+  background-image: radial-gradient(circle, var(--color-zinc-800) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+@utility glass-card {
+  @apply bg-zinc-900/80 backdrop-blur-xl border border-zinc-800 shadow-[0_20px_50px_rgba(0,0,0,0.5)];
+}
